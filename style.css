@@ -17,7 +17,10 @@
   margin: 0 auto;
   overflow: hidden;
   background-color: #393e41;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
+
 .flex {
   display: flex;
   align-items: center;
@@ -42,8 +45,24 @@
   flex: 2;
   padding: 20px;
 }
+
 .user-details {
   padding: 20px;
+  text-align: left;
+  display: none;
+}
+
+.user-card.expanded {
+  transform: scaleY(1.05);
+  cursor: default;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
+.user-card.expanded .user-details {
+  display: block;
 }
 
 .user-card h2 {
@@ -57,16 +76,6 @@
   color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-  .user-card {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .user-image {
-    padding-bottom: 0;
-  }
-}
 .btn {
   background-color: #007bff;
   color: #fff;
@@ -74,9 +83,9 @@
   padding: 0.8rem 1rem;
   cursor: pointer;
   border-radius: 10px;
-  transition: all 1s;
+  transition: all 0.3s;
 }
+
 .btn:hover {
-  color: black;
   background-color: coral;
 }
