@@ -1,7 +1,9 @@
-body {
+.container {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
   display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  row-gap: 3rem;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -64,4 +66,17 @@ body {
   .user-image {
     padding-bottom: 0;
   }
+}
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 1s;
+}
+.btn:hover {
+  color: black;
+  background-color: coral;
 }
